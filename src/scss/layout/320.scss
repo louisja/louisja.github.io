@@ -1,0 +1,98 @@
+@import "../mixins";
+
+.layout {
+  margin: 0;
+  padding: 20px 0;
+  min-width: 320px;
+  font-family: 'Rift', 'Arial', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+
+  &-header {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    top: 0;
+    box-shadow: 0 0 2px rgba(0,0,0,.1);
+    background-color: #fff;
+
+    .logo {
+      float: left;
+    }
+    .menu {
+      float: right;
+    }
+    &:after {
+      @extend %clearfix;
+    }
+  }
+
+  &-footer-left-side {
+    text-align: center;
+    margin: 30px;
+  }
+
+  &-footer-right-side {
+    text-align: center;
+    margin: {
+      top: 20px;
+      bottom: 20px;
+    };
+
+    &:after {
+      display: inline-block;
+      vertical-align: top;
+      content: '';
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      background: {
+        size: cover;
+        image: url(/imgs/instagram-icon-320.png);
+
+      };
+    }
+
+    span {
+      height: 30px;
+      line-height: 30px;
+      text-transform: capitalize;
+      font-family: 'Politica';
+      font-weight: 800;
+      font-style: normal;
+
+      display: inline-block;
+
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:focus , &:visited {
+      color: inherit;
+    }
+  }
+  
+  &-copyright {
+    text-align: center;
+    color: #000;
+    font-style: normal;
+    font-family: 'Politica';
+    margin-top: 40px;
+    font-size: 16px;
+
+    span {
+      font-weight: 500;
+
+      &.title {
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      &.copy {
+        font-family: 'Arial Black';
+      }
+    }
+  }
+}

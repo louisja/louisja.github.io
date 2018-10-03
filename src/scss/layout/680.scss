@@ -1,0 +1,58 @@
+@import "../mixins";
+
+.layout {
+  margin: 0;
+  padding: 20px 0;
+  min-width: 320px;
+  font-family: 'Rift', 'Arial', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+
+  &-header {
+    position: relative;
+    top: auto;
+    padding: 0 20px;
+    box-shadow: none;
+    width: auto;
+
+    .logo {
+      float: left;
+    }
+    .menu {
+      float: right;
+    }
+  }
+
+  &-footer-left-side {
+    text-align: center;
+    margin: 30px;
+  }
+
+  &-footer-right-side {
+    text-align: center;
+    margin: {
+      top: 20px;
+      bottom: 20px;
+    };
+
+    &:before {
+      display: inline-block;
+      vertical-align: top;
+      content: '';
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    span {
+      height: 30px;
+      line-height: 30px;
+      text-transform: capitalize;
+      font-family: 'Politica';
+      font-weight: 800;
+      font-style: normal;
+
+      display: inline-block;
+
+    }
+  }
+}

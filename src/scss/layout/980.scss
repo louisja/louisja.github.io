@@ -1,0 +1,99 @@
+@import "../mixins";
+
+.layout {
+  margin: 0;
+  padding: 20px 0;
+  min-width: 320px;
+  font-family: 'Rift', 'Arial', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+
+  &-header {
+    position: relative;
+    padding: 0 20px;
+    background-color: #fff;
+    margin-top: -1.5%;
+    .logo {
+      float: left;
+    }
+    .menu {
+      float: right;
+    }
+  }
+
+  &-footer-left-side {
+    text-align: center;
+    margin: 30px;
+  }
+
+  &-footer-right-side {
+    float: right;
+    margin: 0;
+    margin-right: 9%;
+    margin-bottom: 3%;
+
+    &:after {
+      display: inline-block;
+      vertical-align: top;
+      content: '';
+      width: 2.8vw;
+      height: 2.8vw;
+      margin-left: 10px;
+      background: {
+        size: cover;
+        image: url(/imgs/instagram-icon-320.png);
+      };
+    }
+
+    span {
+      font-size: 24px;
+      font-size: 1.25vw;
+      font-weight: 800;
+      font-style: normal;
+      line-height: 2;
+      display: inline-block;
+    }
+  }
+
+  &-footer {
+    margin-top: 2%;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &-copyright {
+    text-align: center;
+    font-style: normal;
+    font-family: 'Politica';
+    font-size: 22px;
+    margin-top: 0;
+
+    span {
+      font-weight: 100;
+      letter-spacing: 3px;
+      &.title {
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      &.copy {
+        font-family: 'Arial';
+      }
+    }
+  }
+
+  .layout-main-wrapper {
+    &_stripe {
+      background: {
+        image: url(/imgs/brush.png);
+        repeat: no-repeat;
+        position: 107% 40%;
+        size: 39%;
+      }
+    }
+  }
+}

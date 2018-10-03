@@ -1,0 +1,30 @@
+.article {
+  padding-top: 4%;
+  padding-bottom: 1%;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  max-width: none;
+  width: 80%;
+  position: relative;
+  font-size: 1.8vw;
+
+  &-h1 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3vw;
+  }
+
+  &-p {
+    width: 57%;
+  }
+
+  &_stripe {
+    background: {
+      image: url(/imgs/brush.png);
+      repeat: no-repeat;
+      position: 122% 51%;
+      size: 46%;
+    }
+  }
+}

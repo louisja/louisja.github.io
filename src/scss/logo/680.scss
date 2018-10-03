@@ -1,0 +1,17 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: {
+    repeat: no-repeat;
+    image: url(/imgs/logo_320.png);
+    size: contain;
+  }
+
+  &-aside {
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+}

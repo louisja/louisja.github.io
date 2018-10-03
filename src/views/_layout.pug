@@ -1,0 +1,40 @@
+- var topMenuHrefs = ['/', '/', '/', '/stripe.html', '/', '/'];
+- var footerMenuHrefs = ['/', '/', '/', '/'];
+- var instagramHref = 'https://instagram.com';
+
+doctype html
+html
+    head
+        title=title
+        link(rel="stylesheet" type="text/css" href='/css/app.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body.layout
+        header.layout-header
+            .logo
+            .menu.menu_top
+                .menu-toggler(onclick='this.classList.toggle("active")')
+                ul.menu-ul
+                    each val, idx in topMenu
+                        li.menu-item
+                            a(href=topMenuHrefs[idx]).menu-link= val
+        block content
+        aside.logo.logo-aside
+        footer.layout-footer
+            .layout-footer-left-side
+                .menu.menu_footer
+                    ul.menu-ul
+                        each val, idx in footerMenu
+                            li.menu-item
+                                a(href=footerMenuHrefs[idx]).menu-link= val
+
+            .layout-footer-right-side.instagram-icon
+                a(href=instagramHref)
+                    span=followUs
+
+        .layout-copyright
+            span(class='copy')!='&copy; '
+            span(class='title')=brandName
+            span=' '+copyright
+
+
+

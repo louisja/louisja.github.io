@@ -1,0 +1,14 @@
+extends _layout.pug
+
+block content
+    main.layout-main-wrapper_home
+        .menu.menu_home
+            ul.menu-ul
+                - var homeMenuHrefs = ['/', '/', '/', '/', '/', '/'];
+
+                each val, idx in homePageMenu
+                    li(class='menu-item menu-item_icon')
+                        .wrapper
+                            a(href=homeMenuHrefs[idx]).menu-link
+                                .menu-img
+                                p.menu-label= val

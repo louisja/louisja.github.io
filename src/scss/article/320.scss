@@ -1,0 +1,41 @@
+@import "../mixins";
+
+.article {
+  font-family: 'Politica', sans-serif;
+  font-weight: 100;
+  color: rgb(4, 4, 4);
+  font-style: normal;
+  font-size: 26px;
+  padding-top: 15px;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 340px;
+  margin: 0 auto;
+  margin-top: 90px;
+  background-color: #96d3e2;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &-img {
+    max-width: 100%;
+  }
+
+  &-h2 {
+    font-weight: 100;
+    letter-spacing: 5px;
+  }
+
+  &-h1 {
+    font-family: 'ArTarumianMHarvats';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-weight: normal;
+  }
+
+  &-p {
+    font-family: 'Gill Sans';
+  }
+}

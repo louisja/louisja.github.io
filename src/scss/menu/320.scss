@@ -1,0 +1,145 @@
+@import "../mixins";
+
+.menu {
+  &-item {
+    list-style: none;
+    text-transform: uppercase;
+  }
+  &-ul {
+    margin: 0;
+    padding: 0;
+  }
+  &-link {
+    display: block;
+    cursor: pointer;
+    &:after {
+      @extend %clearfix;
+    }
+  }
+
+  &-img {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+  }
+
+  &-label {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin: 0;
+  }
+
+  &_home {
+    font-family: 'Rift', 'Arial', sans-serif;
+    font-weight: 300;
+    color: rgb(4, 4, 4);
+    font-style: normal;
+    font-size: 26px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    max-width: 340px;
+    margin: 0 auto;
+    margin-top: 90px;
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+      image: url(/imgs/home-menu-image_320.jpg);
+    }
+
+    .menu-item {
+      margin: 20px;
+      padding-left: 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .8);
+
+      &_icon {
+        .menu-img {
+          background: {
+            size: contain;
+            position: center;
+            repeat: no-repeat;
+            image: url(/imgs/menu-icon-1-320.png);
+          }
+        }
+
+        $sizes: (65%, 90%, 40%, 52%, 82%, 80%);
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) .menu-img {
+            background: {
+              size: nth($sizes, $i);
+              image: url(/imgs/home-menu-image-#{$i}_1920.png);
+            }
+          }
+        }
+
+        .menu-label {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &_top {
+    float: right;
+    height: 50px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(4,4,4);
+    .menu-ul {
+      padding: 20px 20px;
+      z-index: 1;
+      box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item {
+      line-height: 50px;
+      height: 50px;
+    }
+  }
+
+  &_footer {
+    color: #929292;
+    line-height: 30px;
+    font-style: normal;
+  }
+
+  &-toggler {
+    float: right;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    margin-right: 16px;
+
+    &:after {
+      content: '+';
+      color: rgba(0,0,0,.3);
+      font-size: 56px;
+    }
+
+    & ~ .menu-ul {
+      display: none;
+      position: absolute;
+      width: calc(100% - 40px);
+      left: 0;
+      top: 90px;
+      background: white;
+    }
+
+    &.active {
+      & ~ .menu-ul {
+        display: block;
+      }
+      &:after {
+        content: '\00d7';
+      }
+    }
+  }
+}
