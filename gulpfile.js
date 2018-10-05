@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin');
 
 const conf = {
     src: 'src',
-    dist: 'dist',
+    dist: 'docs',
     scss: 'scss',
     scssMain: 'app',
     css: 'css',
@@ -66,7 +66,8 @@ gulp.task('watch', function () {
     gulp.watch(`${conf.src}/${conf.imgs}/*`, gulp.series('images')).on('change', browserSync.reload);
 });
 
-gulp.task('default', gulp.series('fonts', 'views', 'scss', 'images', 'watch'), () => {
+gulp.task('default', () => {
+// gulp.task('default', gulp.series('fonts', 'views', 'scss', 'images', 'watch'), () => {
     browserSync({
         server: {
             baseDir: conf.dist
